@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBITRA | Explore the Universe</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">✦ ORBITRA</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#planets">Planets</a>
+            <a href="#solar-system">Solar System</a>
+            <a href="#quiz">Space Quiz</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+        <p class="tagline">A JOURNEY THROUGH SPACE</p>
+        <h1>Explore Beyond<br>Our World.</h1>
+
+        <p class="description">
+            Discover the wonders of our solar system.
+            Explore planets, uncover facts and travel
+            through the universe.
+        </p>
+
+        <a href="#planets" class="explore-btn">Explore Planets →</a>
+    </section>
+
+    <!-- PLANETS -->
+
+    <section class="planets" id="planets">
+        <p class="tagline">OUR SOLAR SYSTEM</p>
+        <h2>Meet the Planets</h2>
+
+        <div class="planet-list">
+            <div class="planet">☿<p>Mercury</p></div>
+            <div class="planet">♀<p>Venus</p></div>
+            <div class="planet">🌍<p>Earth</p></div>
+            <div class="planet">♂<p>Mars</p></div>
+            <div class="planet">♃<p>Jupiter</p></div>
+            <div class="planet">🪐<p>Saturn</p></div>
+            <div class="planet">♅<p>Uranus</p></div>
+            <div class="planet">♆<p>Neptune</p></div>
+        </div>
+    </section>
+
+    <!-- ANIMATED SOLAR SYSTEM -->
+
+    <section class="solar-system-section" id="solar-system">
+
+        <p class="tagline">A COSMIC EXPERIENCE</p>
+        <h2>Our Solar System</h2>
+
+        <p class="system-description">
+            Watch our planetary neighbourhood in motion.
+        </p>
+
+        <div class="solar-system">
+            <div class="sun"></div>
+
+            <div class="orbit orbit-mercury">
+                <div class="orbit-planet mercury"></div>
+            </div>
+
+            <div class="orbit orbit-venus">
+                <div class="orbit-planet venus"></div>
+            </div>
+
+            <div class="orbit orbit-earth">
+                <div class="orbit-planet earth"></div>
+            </div>
+
+            <div class="orbit orbit-mars">
+                <div class="orbit-planet mars"></div>
+            </div>
+
+            <div class="orbit orbit-jupiter">
+                <div class="orbit-planet jupiter"></div>
+            </div>
+
+            <div class="orbit orbit-saturn">
+                <div class="orbit-planet saturn"></div>
+            </div>
+
+            <div class="orbit orbit-uranus">
+                <div class="orbit-planet uranus"></div>
+            </div>
+
+            <div class="orbit orbit-neptune">
+                <div class="orbit-planet neptune"></div>
+            </div>
+        </div>
+
+        <p class="system-note">
+            Illustrative animation. Planet sizes and orbital distances
+            are not to scale.
+        </p>
+
+    </section>
+
+    <!-- SPACE QUIZ -->
+
+    <section class="quiz-section" id="quiz">
+
+        <p class="tagline">TEST YOUR COSMIC KNOWLEDGE</p>
+        <h2>Space Explorer Quiz</h2>
+
+        <p class="quiz-description">
+            Think you know the universe? Let's find out!
+        </p>
+
+        <div class="quiz-box">
+
+            <h3 id="question">Loading question...</h3>
+
+            <div id="answers" class="answers"></div>
+
+            <p id="quizResult"></p>
+
+            <button id="nextQuestion" class="explore-btn">
+                Next Question →
+            </button>
+
+            <p id="quizScore">Score: 0</p>
+
+        </div>
+
+    </section>
+
+    <!-- PLANET POPUP -->
+
+    <div class="planet-popup" id="planetPopup">
+
+        <div class="popup-content">
+
+            <button class="close-btn" id="closePopup">×</button>
+
+            <img id="planetImage" src="" alt="Planet">
+
+            <h2 id="planetName">Planet Name</h2>
+
+            <p id="planetDescription">
+                Planet information will appear here.
+            </p>
+
+            <div class="planet-details">
+
+                <p>
+                    <strong>Distance from Sun:</strong>
+                    <span id="planetDistance"></span>
+                </p>
+
+                <p>
+                    <strong>Diameter:</strong>
+                    <span id="planetDiameter"></span>
+                </p>
+
+                <p>
+                    <strong>Average Temperature:</strong>
+                    <span id="planetTemperature"></span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer id="about">
+        <p>
+            ORBITRA © 2026 |
+            Exploring the universe, one planet at a time.
+        </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
